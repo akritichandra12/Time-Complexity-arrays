@@ -1,0 +1,47 @@
+public class intersection
+{
+    void main()
+    {
+        //O(mn) complexity
+        int arr1[]={2,3,6,7,9,11};
+        int arr2[]={4,6,8,9,12};
+        int i;
+        int j;
+        for(i=0;i<arr1.length;i++)
+        {
+            for(j=0;j<arr2.length;j++)
+            {
+                if(arr1[i]==arr2[j])
+                {
+                    System.out.println(arr1[i]);
+                }
+            }
+        }
+    }
+}
+
+public class intersection2
+{
+    void main()
+    //O(m+n)
+    {
+        int i=0;
+        int j=0;
+        int arr1[]={2,3,6,7,9,11};
+        int arr2[]={4,6,8,9,12};
+        while(i<arr1.length&&j<arr2.length)
+        {
+            if(arr1[i]==arr2[j])
+            {
+                System.out.println(arr1[j]);
+                i++;
+                j++;
+            }
+            else if(arr1[i]>arr2[j])
+            j++;
+            else
+            i++;
+        }
+        
+    }
+}
